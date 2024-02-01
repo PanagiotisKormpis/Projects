@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  border: 0;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-content:left;
+  background: url(./images/nasa-vhSz50AaFAs-unsplash.jpg) no-repeat;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 400px;
+  height: 100px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: min-content;
+}
+
+.search-box input {
+  width: 80%;
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding-left: 60px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  outline: none;
+  color: white;
+}
+
+.search input::placeholder {
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+
+.search-box button {
+  cursor: pointer;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.7rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  transform: rotate(90deg);
+  transition: transform 1s ease-in-out;
+  color: white;
+}
+
+.search-box button:hover {
+  color: white;
+  background-color: black;
+  transform: scale(1.05);
+}
+
+.search-box i {
+  position: absolute;
+  font-size: 2rem;
+  transition: 0.4s ease;
+}
+
+.weather {
+  text-align: center;
+}
+
+.weather img {
+  width: 30%;
+  margin-top: 40px;
+}
+
+.weather .temperature {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 100;
+  margin-top: 30px;
+}
+
+.weather .temperature span {
+  position: absolute;
+  font-size: 2rem;
+}
+
+.weather .description {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.weather,
+.details {
+  scale: 0;
+  opacity: 0;
+}
+
+.min-max {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.hi-temp, 
+.low-temp{
+    margin: 10px;
+}
+
+.town-details {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.town, 
+.country{
+  margin: 10px;
+}
+
+.details {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.details .humidity,
+.details .wind {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+}
+
+.details .humidity {
+  padding-left: 20px;
+  justify-content: flex-start;
+}
+
+.details .wind {
+  padding-right: 20px;
+  justify-content: flex-end;
+}
+
+.details i {
+  font-size: 1.6rem;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.details span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.details p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+
+.not-found {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  display: none;
+  scale: 0;
+  opacity: 0;
+  color: white;
+}
+
+.not-found img {
+  width: 70%;
+}
+
+.not-found p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+
+.fadeIn {
+  animation: 0.2s fadeIn forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  to {
+    scale: 1.1;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .details {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .details .humidity,
+  .details .wind {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .container{
+    backdrop-filter: blur(10px);
+  }
+  
+}
